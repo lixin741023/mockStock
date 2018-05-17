@@ -19,6 +19,12 @@ input{
 	height: auto!important;
 	line-height: normal!important;
 }
+ul,li{margin: 0;padding: 0;list-style: none;}
+
+/*加载中样式位置*/
+.mui-pull-top-pocket{
+	top: 0.4rem;
+}
 
 /*所有组件初始化样式*/
 .componentsInit{

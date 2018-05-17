@@ -21,6 +21,7 @@ let lx={
 	
 	/*全为数字验证*/
 	numberReg:/^[\d\s]+$/,
+	
 };
 
 export {lx};

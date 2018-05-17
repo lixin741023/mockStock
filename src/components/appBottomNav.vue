@@ -1,5 +1,5 @@
 <template>
-	<ul class="appBottomNav mui-row">
+	<ul class="appBottomNav mui-row" style="opacity: 0.2; border-top: 1px solid blue;">
 		
 		<router-link :to="{name:'teachers'}" tag="li" class="mui-col-xs-4">
 			<div class="mui-icon mui-icon-pengyouquan"></div>
@@ -25,6 +25,7 @@
 //		mounted:function(){
 //			console.log(this.$route)
 //		}
+
 	}
 	
 </script>

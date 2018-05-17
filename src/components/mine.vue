@@ -9,12 +9,12 @@
 			</div>
 		</div>
 		<ul>
-			<li class="mineList">
+			<router-link :to="{name:'teachersMessageList',params:{teachersMessageList:99}}" tag="li" class="mineList">
 				<div class="newMessage">1</div>
 				<img class="icon" src="../images/mine_message.png" />
 				<span class="title">导师消息</span>
 				<span class="right">></span>
-			</li>
+			</router-link>
 			<li class="mineList">
 				<img class="icon" src="../images/mine_myTeacher.png" />
 				<span class="title">我的拜师</span>
