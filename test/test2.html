@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:100px;
+left: 0;
+position:relative;
+height:100px;
+background:blue;
+transition:left 2s;
+-moz-transition:left 2s; /* Firefox 4 */
+-webkit-transition:left 2s; /* Safari and Chrome */
+-o-transition:left 2s; /* Opera */
+}
+
+div:hover
+{
+left:300px;
+}
+</style>
+</head>
+<body>
+
+<div></div>
+
+<p>请把鼠标指针移动到蓝色的 div 元素上，就可以看到过渡效果。</p>
+
+<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+</body>
+</html>
