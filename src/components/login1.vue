@@ -9,11 +9,25 @@
 			</button>
 		</div>
 	</div>
+	<!--<mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
+	<div class="login1 componentsInit">
+		<div class="title">手机号登录</div>
+		<div class="row">
+			<img class="loginTitle" src="../images/loginTitle.png" />
+			<input type="number" placeholder="请输入您的手机号码" v-model="phoneNumber"/>
+			<button class="login1Btn" @click="upPhoneNumber()">
+				获取短信验证码
+			</button>
+		</div>
+	</div>
+	</mt-loadmore>-->
 </template>
 
 <script>
+	import Vue from 'vue';
+	import { Loadmore } from 'mint-ui';
 	import {lx} from '../js/global.js';
-
+	Vue.component(Loadmore.name, Loadmore);
 	export default {
 		data(){
 			return {

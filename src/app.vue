@@ -1,14 +1,17 @@
 <template>
 	<section class="app">
-		<transition :name="animate">
+		<transition >
 			<router-view></router-view>
 		</transition>
 		<app-bottom-nav v-show='bottomNavIF'></app-bottom-nav>
+		<!--<test></test>-->
 	</section>
 </template>
 
 <script>
 	import appBottomNav from './components/appBottomNav.vue';
+	
+	import test from './components/test.vue';/*临时测试*/
 
 	export default {
 		created: function() {
@@ -25,7 +28,8 @@
 			bottomNavIF: true
 		}),
 		components: {
-			appBottomNav
+			appBottomNav,
+			test
 		},
 		watch: {
 			$route: function(to, from) {

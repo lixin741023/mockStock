@@ -46,6 +46,7 @@ const config={
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.ProvidePlugin({
 		  $: 'jquery',
+		  Bscroll:'better-scroll'
 //		  cc: 'jquery',
 //		  mui:'muia'
 		})

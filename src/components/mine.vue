@@ -35,20 +35,36 @@
 	import haveNewMessage from './haveNewMessage.vue';
 	import appBottomNav_block from './appBottomNav_block.vue';
 	export default {
-		components:{
+		components: {
 			haveNewMessage,
-			appBottomNavBlock:appBottomNav_block
+			appBottomNavBlock: appBottomNav_block
+		},
+		mounted: function() {
+		},
+		/*路由组件-离开守卫*/
+		beforeRouteLeave(to,form,next){
+			if(event.currentTarget.className=='mineList'){
+				event.currentTarget.style.backgroundColor='#ccc';
+				setTimeout(()=>{next()},20);	
+			}else{
+				next();
+			};
 		}
 	}
-	
 </script>
 
 <style lang="less" scoped>
-	.mine{
+	.mine {}
+	
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
-	ul,li{margin: 0;padding: 0;list-style: none;}
-	.mine{
-		.top{
+	
+	.mine {
+		.top {
 			font-size: 0.15rem;
 			display: flex;
 			flex-direction: column;
@@ -56,22 +72,27 @@
 			padding: 0.42rem 0.33rem;
 			color: #fff;
 			background-color: #464646;
-			img{
+			img {
 				width: 0.73rem;
 				height: 0.73rem;
 				border-radius: 50%;
 			}
-			>span{margin-top: 0.09rem;}
-			>div{margin-top: 0.06rem;}
+			>span {
+				margin-top: 0.09rem;
+			}
+			>div {
+				margin-top: 0.06rem;
+			}
 		}
 	}
-	.mineList{
+	
+	.mineList {
 		border-bottom: 1px solid #9a9899;
 		padding: 0.11rem 0.24rem;
 		display: flex;
 		align-items: center;
 		position: relative;
-		.newMessage{
+		.newMessage {
 			position: absolute;
 			width: 0.17rem;
 			height: 0.17rem;
@@ -84,21 +105,21 @@
 			left: 0.4rem;
 			top: 0.09rem;
 		}
-		.icon{
+		.icon {
 			width: 0.25rem;
 			height: 0.25rem;
 		}
-		.title{
+		.title {
 			font-size: 0.15rem;
 			margin-left: 0.2rem;
 		}
-		.right{
+		.right {
 			position: absolute;
 			right: 0.24rem;
 			font-size: 0.14rem;
 			color: #747474;
 		}
-		.right_txt{
+		.right_txt {
 			position: absolute;
 			right: 0.24rem;
 			font-size: 0.15rem;

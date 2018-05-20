@@ -22,9 +22,11 @@
 <style lang="less" scoped>
 	.appBottomNav{
 		visibility: hidden;
+		
 		margin: 15px 0 0 0;
 		padding: 0.09rem 0 0.045rem 0;
 		background-color: #e9e9e9;
+		/*background-color: red;*/
 		li{
 			display: flex;
 			flex-direction: column;

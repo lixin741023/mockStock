@@ -3,10 +3,11 @@ import VueRouter from 'vue-router';
 import routes from '../router/routes.js';
 import indigo from './plugins/indigo.js';
 
-import muiCss from './plugins/mui/mui.css';
-import globalCss from './styles/globalCss.css';
+import muiCss from './plugins/mui/mui.css';/*mui CSS*/
+import 'mint-ui/lib/style.css'/*mint-UI CSS*/
+import globalCss from './styles/globalCss.css';/*自定义 CSS*/
 
-import app from './app.vue';
+import app from './app.vue';/*App 入口*/
 
 Vue.use(VueRouter);
 const router = new VueRouter({
