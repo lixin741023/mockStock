@@ -33,7 +33,7 @@
 		},
 		data:()=>({
 			focus:0,
-			btnCD:5,//设置 获取验证码的冷却时间
+			btnCD:15,//设置 获取验证码的冷却时间
 			btnCD_best:0,
 			show_checkingAnimation:false//验证中动画
 		}),
