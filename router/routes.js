@@ -3,13 +3,27 @@ import login2 from '../src/components/login2.vue';
 import teachers from '../src/components/teachers.vue';
 import teachersDetail from '../src/components/teachersDetail.vue';
 import Zhibo from '../src/components/Zhibo.vue';
+import ZhiboDetail from '../src/components/ZhiboDetail.vue';
 import mine from '../src/components/mine.vue';
 import teachersMessageList from '../src/components/teachersMessageList.vue';
 import TiaocangMore from '../src/components/TiaocangMore.vue';
 import ChicangMore from '../src/components/ChicangMore.vue';
 
+import test1 from '../src/components/test1.vue';
+import test2 from '../src/components/test2.vue';
 
 const routes=[
+	{
+		name:'test1',
+		path:'/test1',
+		component:test1,
+	},
+	{
+		name:'test2',
+		path:'/test2/:idd',
+		component:test2,
+		props:true/**/
+	},
 	{
 		name:'login1',
 		path:'/login1',
@@ -38,6 +52,11 @@ const routes=[
 		name:'Zhibo',
 		path:'/Zhibo',
 		component:Zhibo
+	},
+	{
+		name:'ZhiboDetail',
+		path:'/Zhibo/:ZhiboDetail',
+		component:ZhiboDetail
 	},
 	{
 		name:'mine',

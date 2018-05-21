@@ -1,10 +1,11 @@
 <template>
 	<div class="TiaocangMore componentsInit">
 		<div class="nav">
-			<span class="mui-icon mui-icon-arrowthinleft" style="font-weight: bold;"></span>
+			<span @click="goBack()" class="mui-icon mui-icon-arrowthinleft" style="font-weight: bold;"></span>
 			<span>最新调仓</span>
 		</div>
 		<div style="height: 0.4rem;"></div>
+		<div class="wrapper_TiaocangMore" style="height: 100%;">
 		<ul>
 			<li class="TiaocangList">
 				<div class="model model_buy">买</div>
@@ -98,11 +99,48 @@
 					</div>
 				</div>
 			</li>
+			<li class="TiaocangList">
+				<div class="model model_sell">卖</div>
+				<p class="stockTitle">股市掘金(002500)</p>
+				<div class="row">
+					<div class="item">
+						<span>成交数量</span>
+						<span>50124股</span>
+					</div>
+					<div class="item">
+						<span>成交价格</span>
+						<span>12.18元</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item_last">
+						<span>仓位变化</span>
+						<span>20%</span>
+						<div class="change_sell">
+							<span class="mui-icon mui-icon-arrowthinright"></span> 50%
+						</div>
+					</div>
+				</div>
+			</li>
 		</ul>
+		</div>
 	</div>
 </template>
 
 <script>
+	export default {
+		mounted:()=>{
+			/*better-scroll滚动控制*/
+			new Bscroll.default('.wrapper_TiaocangMore', {
+				click: true
+			});
+		},
+		methods:{
+			goBack(){
+				this.$router.go(-1);
+			}
+		}
+	}
 </script>
 
 <style lang="less" scoped>

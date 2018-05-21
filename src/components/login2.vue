@@ -15,9 +15,9 @@
 		</div>
 		
 		<zzc-l-v-1 v-show="show_checkingAnimation" @click.native="close_zzcLV1">
-			<div class="checking">
+			<!--<div class="checking">
 				<img src="../images/Loading.gif" />
-			</div>
+			</div>-->
 		</zzc-l-v-1>
 	</div>
 </template>
@@ -25,6 +25,8 @@
 <script>
 	import {lx} from '../js/global.js';
 	import zzcLV1 from './zzcLV1.vue';
+	import { Indicator } from 'mint-ui'; 
+	
 	export default{
 		components:{
 			zzcLV1
@@ -62,7 +64,14 @@
 						//Ajax
 //						alert('发送验证码到服务器进行验证');
 						this_.show_checkingAnimation=true;
-						setTimeout(()=>{this_.$router.push('teachers')},2000);
+						Indicator.open({/*mint-ui 验证中……*/
+							spinnerType:'fading-circle'
+						});
+						setTimeout(()=>{
+							Indicator.close();
+							lx.alertBottomTip('登录成功',1500,function(){this_.$router.push({name:'teachers'})});
+						},2500)
+//						setTimeout(()=>{this_.$router.push('teachers')},2000);
 						return;
 					};
 					$('input[type=number]')[this_.focus].focus();

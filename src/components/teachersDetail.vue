@@ -1,10 +1,10 @@
 <template>
 	<div class="teachersDetail componentsInit">
-		<div class="nav" style="opacity: 0.5;">
+		<div class="nav">
 			<span @click="goBack" class="mui-icon mui-icon-back"></span>
 			<span>令狐老师</span>
 		</div>
-		<div class="wrapperFather" style=" height: 100%;">
+		<div class="wrapperFather_teachersDetail" style=" height: 100%;">
 			<div class="wrapperChild" style="position: relative;">
 				<p class="wrapperTip">{{wrapperTip}}</p>
 				<div class="nav_block" style="height: 0.4rem;"></div>
@@ -57,9 +57,11 @@
 	import Chicang from './Chicang.vue';
 	import Tiaocang from './Tiaocang.vue';
 	import teacherComment from './teacherComment.vue';
+	import {lx} from '../js/global.js';
+	
 	export default {
 		data:()=>({
-			wrapperTip:'人生总是拉拉扯扯^^'
+			wrapperTip:''
 		}),
 		components: {
 			teacherComment,
@@ -67,27 +69,34 @@
 			inComeImg,
 			Chicang
 		},
-		methods: {
+		methods:{
 			goBack() {
 				this.$router.go(-1);
+			},
+			randomWrapperTip(){
+				let num=lx.RandomNumBoth(0,lx.stockSaying.length-1);
+				this.wrapperTip=lx.stockSaying[num];
 			}
 		},
 		mounted:function(){
+			let this_=this;
 			/*better-scroll滚动控制*/
-			new Bscroll.default('.wrapperFather', {
+			new Bscroll.default('.wrapperFather_teachersDetail', {
 				click: true
 			});
+			this.randomWrapperTip();
 		}
 	};
 </script>
 
 <style lang="less" scoped>
 	.wrapperTip{
+		padding: 0 16px;
 		position: absolute;
 		width: 100%;
 		text-align: center;
 		z-index: -1;
-		font-size: 0.1rem;
+		font-size: 12px;
 		color: #CCCCCC;
 	}
 	.teachersDetail {}

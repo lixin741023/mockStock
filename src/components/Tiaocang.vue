@@ -2,7 +2,7 @@
 	<div class="Tiaocang">
 		<div class="title">
 			<span>最新调仓</span>
-			<span>更多></span>
+			<span @click="a">更多></span>
 		</div>
 		<ul>
 			<li class="TiaocangList">
@@ -58,6 +58,13 @@
 </template>
 
 <script>
+	export default {
+		methods:{
+			a(){
+				this.$router.push({name:'TiaocangMore'})
+			}
+		}
+	}
 </script>
 
 <style lang="less" scoped>

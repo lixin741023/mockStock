@@ -5,7 +5,7 @@
 			<span>导师消息</span>
 		</div>
 		<div style="height: 0.4rem;"></div>
-		<div class="wrapperFather" style="height: 100%;">
+		<div class="wrapperFather_teachersMessageList" style="height: 100%;">
 		<ul style="padding: 0.1rem 0.1rem 0; ">
 			<li>
 				<div class="row1">
@@ -110,22 +110,22 @@
 		}),
 		mounted:function(){
 			/*better-scroll滚动控制*/
-			new Bscroll.default('.wrapperFather', {
+			new Bscroll.default('.wrapperFather_teachersMessageList', {
 				click: true
 			});
 		},
 		methods:{
 			
-		}
+		},
 		/*路由组件-离开守卫*/
-//		beforeRouteLeave(to,form,next){
-//			if(event.currentTarget.className=='row2'){
-//				event.currentTarget.style.backgroundColor='#ccc';
-//				setTimeout(()=>{next()},20);	
-//			}else{
-//				next();
-//			};
-//		}
+		beforeRouteLeave(to,form,next){
+			if(event.currentTarget.className=='row2'){
+				event.currentTarget.style.backgroundColor='#ccc';
+				setTimeout(()=>{next()},20);	
+			}else{
+				next();
+			};
+		}
 	}
 </script>
 

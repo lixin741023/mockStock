@@ -1,17 +1,17 @@
 <template>
 	<section class="app">
-		<transition >
+		<transition :name="animate">
 			<router-view></router-view>
 		</transition>
 		<app-bottom-nav v-show='bottomNavIF'></app-bottom-nav>
-		<!--<test></test>-->
 	</section>
 </template>
 
 <script>
 	import appBottomNav from './components/appBottomNav.vue';
 	
-	import test from './components/test.vue';/*临时测试*/
+	import test1 from './components/test1.vue';/*临时测试*/
+	import test2 from './components/test2.vue';/*临时测试*/
 
 	export default {
 		created: function() {
@@ -29,12 +29,12 @@
 		}),
 		components: {
 			appBottomNav,
-			test
+			test1
 		},
 		watch: {
 			$route: function(to, from) {
-				let start = from.path.split('/').length;
-				let end = to.path.split('/').length;
+				let start = from.path.split('/').length;/*从哪里来*/
+				let end = to.path.split('/').length;/*去哪里*/
 
 				/*根据路由目的地，选择底部NAV的显示与隐藏*/
 				if(to.path == '/teachers' || to.path == '/Zhibo' || to.path == '/mine') {
@@ -42,12 +42,12 @@
 				} else {
 					this.bottomNavIF = false
 				};
-
+				/*组件过渡动态1*/
 				if(from.path == '/login1' && to.path == '/login2') {
-					this.animate = 'login2'
-					console.log(99)
+					this.animate = 'loginMode'
 					return
 				};
+				/*组件过渡动态2*/
 				if(start == end) {
 					this.animate = 'fade';
 					console.log('fade')

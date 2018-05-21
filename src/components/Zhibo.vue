@@ -3,44 +3,45 @@
 		<div class="wrapperChild" style="height: 100.1%;">
 			<div class="nav">老师列表</div>
 			<ul>
-				<li>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
 					<div class="ing">正在直播</div>
 					<img src="../images/Zhibo_img.jpg" />
 					<span>达摩</span>
-				</li>
-				<li>
-					<div class="ing">正在直播</div>
-					<img src="../images/Zhibo_img.jpg" />
-					<span>金阳</span>
-				</li>
-				<li>
-					<img src="../images/Zhibo_img.jpg" />
-					<span>红阳</span>
-				</li>
-				<li>
-					<img src="../images/Zhibo_img.jpg" />
-					<span>木子易</span>
-				</li>
-			</ul>
-			<ul>
-				<li>
+				</router-link>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
 					<img src="../images/Zhibo_img.jpg" />
 					<span>有道</span>
-				</li>
-				<li>
+				</router-link>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
+					<img src="../images/Zhibo_img.jpg" />
+					<span>红尘</span>
+				</router-link>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
+					<div class="ing">正在直播</div>
+					<img src="../images/Zhibo_img.jpg" />
+					<span>诸葛</span>
+				</router-link>
+			</ul>
+			<ul>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
+					<img src="../images/Zhibo_img.jpg" />
+					<span>诸葛</span>
+				</router-link>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
 					<div class="ing">正在直播</div>
 					<img src="../images/Zhibo_img.jpg" />
 					<span>红尘</span>
-				</li>
-				<li>
+				</router-link>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
+					<div class="ing">正在直播</div>
 					<img src="../images/Zhibo_img.jpg" />
 					<span>诸葛</span>
-				</li>
-				<li>
+				</router-link>
+				<router-link tag="li" :to="{name:'ZhiboDetail',params:{ZhiboDetail:7}}">
 					<div class="ing">正在直播</div>
 					<img src="../images/Zhibo_img.jpg" />
 					<span>琥珀</span>
-				</li>
+				</router-link>
 			</ul>
 			<app-bottom-nav-block></app-bottom-nav-block>
 		</div>
@@ -58,6 +59,11 @@
 			new Bscroll.default('.Zhibo', {
 				click: true
 			});
+		},
+		methods:{
+			test(){
+				this.$router.push({name:'ZhiboDetail',params:{ZhiboDetail:88}})
+			}
 		}
 	}
 </script>

@@ -1,10 +1,11 @@
 <template>
 	<div class="ChicangMore componentsInit">
 		<div class="nav">
-			<span class="mui-icon mui-icon-arrowthinleft" style="font-weight: bold;"></span>
+			<span @click="goBack()" class="mui-icon mui-icon-arrowthinleft" style="font-weight: bold;"></span>
 			<span>当前持仓</span>
 		</div>
 		<div style="height: 0.4rem;"></div>
+		<div class="wrapper_ChicangMore" style="height: 100%;">
 		<ul>
 			<li class="ChicangList">
 				<p class="stockTitle">股市掘金(002500)</p>
@@ -187,10 +188,24 @@
 				</div>
 			</li>
 		</ul>
+		</div>
 	</div>
 </template>
 
 <script>
+	export default {
+		mounted:()=>{
+			/*better-scroll滚动控制*/
+			new Bscroll.default('.wrapper_ChicangMore', {
+				click: true
+			});
+		},
+		methods:{
+			goBack(){
+				this.$router.go(-1);
+			}
+		}
+	}
 </script>
 
 <style lang="less" scoped>

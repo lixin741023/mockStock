@@ -2,7 +2,7 @@
 	<div class="Chicang">
 		<div class="title">
 			<span>当前持仓</span>
-			<span>更多></span>
+			<span @click="a()">更多></span>
 		</div>
 		<ul>
 			<li class="ChicangList">
@@ -100,6 +100,13 @@
 </template>
 
 <script>
+	export default {
+		methods:{
+			a(){
+				this.$router.push({name:'ChicangMore'})
+			}
+		}
+	}
 </script>
 
 <style lang="less" scoped>

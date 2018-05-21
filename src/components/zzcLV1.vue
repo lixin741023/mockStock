@@ -11,7 +11,7 @@
 <style lang="less" scoped>
 	.zzcLV1{
 		position: fixed;
-		z-index: 3;
+		z-index: 11;
 		left: 0;
 		right: 0;
 		top: 0;
