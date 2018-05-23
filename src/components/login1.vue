@@ -27,6 +27,7 @@
 				if(this.phoneNumber==''){lx.alertBottomTip('手机号不能为空');return};
 				if(lx.phoneReg.test(this.phoneNumber)){
 					//AJAX
+					
 					lx.alertBottomTip('成功发送验证码',2000);
 					setTimeout(()=>{this.$router.push({name:'login2'})},1000)
 				}else{
@@ -41,25 +42,26 @@
 	.login1{
 	}
 	.title{
+		display: flex;
 		height: 0.46rem;
 		background-color: #2f2f2f;
-		line-height: 0.46rem;
-		text-align: center;	
+		justify-content: center;		
+		align-items: center;
 		color: #fff;
 		font-size: 0.13rem;
 	}
 	.row{display: flex; flex-direction: column;align-items: center;}
 	.loginTitle{
-		width: 0.68rem;
-		height: 0.68rem;
-		margin-top: 0.18rem;
+		width: 0.7rem;
+		height: 0.7rem;
+		margin-top: 0.2rem;
 	}
 	input{
-		margin-top: 0.23rem!important;
-		padding-bottom: 0.05rem!important;
+		margin-top: 0.24rem!important;
+		padding-bottom: 0.02rem!important;
 		border: 0; 
 		text-align: center;
-		font-size: 0.09rem;
+		font-size: 0.135rem;
 		border-bottom: 1px solid #d5d3d4;
 		letter-spacing: 1px;
 		width: 70%;
@@ -70,8 +72,8 @@
 	.login1Btn{
 		margin-top: 0.23rem;
 		width: 70%;
-		font-size: 0.085rem;
-		padding: 0.1rem 0;
+		font-size: 0.13rem;
+		padding: 0.08rem 0;
 		color: #fff;
 		text-align: center;	
 		border-radius: 0.5rem;

@@ -14,10 +14,9 @@ const router = new VueRouter({
 	routes
 });
 
-//router.beforeEach((to,from,next)=>{
-//	alert(this+':   beforeEach')
-//	next()
-//});
+
+
+
 //router.beforeResolve((to,from,next)=>{
 //	alert(this+':   beforeResolve')
 //	next()
@@ -30,5 +29,46 @@ new Vue({
 	render:(create)=>create(app),
 	router
 }).$mount('#app');
+
+import mui from './plugins/mui/mui.js';
+mui.plusReady(function() {
+	var first = null;
+	router.beforeEach((to, from, next) => {
+		if(first) {
+			if(from.name == 'teachers' || from.name == 'Zhibo' || from.name == 'mine') {
+
+			} else {
+				next();
+			}
+		} else {
+			next();
+		};
+	});
+
+	plus.key.addEventListener('backbutton', function() {
+		if(router.app._route.name == 'teachers' || router.app._route.name == 'Zhibo' || router.app._route.name == 'mine') {
+			if(!first) {
+				first = new Date().getTime();
+				mui.toast('再按一次退出应用');
+				setTimeout(function() {
+					first = null;
+				}, 1000);
+			} else {
+				if(new Date().getTime() - first < 1000) {
+					plus.runtime.quit();
+				}
+			}
+		};
+	}, false);
+});
+
+
+//console.log(router.app._route.name)
+
+
+
+
+
+
 
 

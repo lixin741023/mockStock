@@ -14,7 +14,7 @@
 <style lang="less" scoped>
 	.inComeImg{
 		.title{
-			border-bottom: 1px solid #cbc;
+			border-bottom: 1px solid #ccc;
 			letter-spacing: 1px;
 			font-size: 0.16rem;			
 			background-color: #d3d3d3;

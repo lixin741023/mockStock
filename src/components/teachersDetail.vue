@@ -121,7 +121,7 @@
 			font-size: 0.2rem;
 		}
 		span:nth-child(2) {
-			font-size: 0.2rem;
+			font-size: 0.165rem;
 		}
 	}
 	

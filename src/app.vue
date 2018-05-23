@@ -9,9 +9,6 @@
 
 <script>
 	import appBottomNav from './components/appBottomNav.vue';
-	
-	import test1 from './components/test1.vue';/*临时测试*/
-	import test2 from './components/test2.vue';/*临时测试*/
 
 	export default {
 		created: function() {
@@ -28,8 +25,7 @@
 			bottomNavIF: true
 		}),
 		components: {
-			appBottomNav,
-			test1
+			appBottomNav
 		},
 		watch: {
 			$route: function(to, from) {

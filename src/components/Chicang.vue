@@ -121,7 +121,7 @@
 			background-color: #d3d3d3;
 			padding: 0.075rem 0.15rem;
 			color: #333;
-			border-bottom: 1px solid #cbc;
+			border-bottom: 1px solid #ccc;
 			span:nth-child(2){
 				font-size: 0.12rem;
 			}

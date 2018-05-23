@@ -168,7 +168,7 @@
 			font-size: 0.2rem;
 		}
 		span:nth-child(2) {
-			font-size: 0.2rem;
+			font-size: 0.165rem;
 		}
 	}
 	
@@ -194,13 +194,13 @@
 			font-size: 0.13rem;
 			font-weight: bold;
 		}
-		.model {
+		.model{
 			position: absolute;
-			display: inline-block;
+			display: flex;	
 			width: 0.25rem;
 			height: 0.25rem;
-			line-height: 0.25rem;
-			text-align: center;
+			justify-content: center;
+			align-items: center;
 			font-size: 0.13rem;
 			left: 0.1rem;
 			top: 0.12rem;

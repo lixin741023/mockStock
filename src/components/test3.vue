@@ -1,6 +1,6 @@
 <template>
-	<div class="txt2">
-		<h2 @click="back">txt2</h2>
+	<div class="txt3">
+		<h2 @click="back">txt3</h2>
 		<hr />
 		<p>
 			{{xx}}

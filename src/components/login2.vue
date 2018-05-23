@@ -38,7 +38,7 @@
 			show_checkingAnimation:false//验证中动画
 		}),
 		mounted:function(){
-			$('input[type=number]')[this.focus].focus();
+//			$('input[type=number]')[this.focus].focus();
 			this.btnCD_state();
 			this.btnCD_best=this.btnCD;
 		},
@@ -96,7 +96,7 @@
 				this.btnCD=this.btnCD_best;
 				this.btnCD_state();
 				//Ajax
-				alert('重新获取验证码');
+				lx.alertBottomTip('已重新发送验证码');
 				$('input[type=number]').val('');//清空已输入的验证码
 				this.focus=0;//光标归位
 			}
@@ -140,14 +140,14 @@
 	}
 	.tip{
 		margin-top: 0.16rem!important;
-		font-size: 0.1rem;
+		font-size: 0.125rem;
 		color: #6D6D72;
 	}
 	.login2Btn{
-		margin-top: 0.21rem;
+		margin-top: 0.23rem;
 		width: 70%;
-		font-size: 0.085rem;
-		padding: 0.1rem 0;
+		font-size: 0.13rem;
+		padding: 0.08rem 0;
 		color: #fff;
 		text-align: center;	
 		border-radius: 0.5rem;

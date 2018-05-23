@@ -71,7 +71,7 @@
 	ul,li{margin: 0;padding: 0;list-style: none;}
 	.Tiaocang{
 		.title{
-			border-bottom: 1px solid #cbc;
+			border-bottom: 1px solid #ccc;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -98,12 +98,12 @@
 			font-weight: bold;			
 		}
 		.model{
-			position: absolute;	
-			display: inline-block;
+			position: absolute;
+			display: flex;	
 			width: 0.25rem;
 			height: 0.25rem;
-			line-height: 0.25rem;
-			text-align: center;
+			justify-content: center;
+			align-items: center;
 			font-size: 0.13rem;
 			left: 0.1rem;
 			top: 0.12rem;

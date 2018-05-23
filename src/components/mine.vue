@@ -94,13 +94,14 @@
 		position: relative;
 		.newMessage {
 			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 0.17rem;
 			height: 0.17rem;
 			background-color: #cd142d;
 			font-size: 0.1rem;
 			border-radius: 50%;
-			text-align: center;
-			line-height: 0.17rem;
 			color: #fff;
 			left: 0.4rem;
 			top: 0.09rem;
