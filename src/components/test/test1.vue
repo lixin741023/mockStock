@@ -28,8 +28,7 @@
 				this.$router.push({name:'test4',params:{xx:'it is test4'}})
 			}
 		}
-	}
-	
+	};
 </script>
 
 <style scoped>

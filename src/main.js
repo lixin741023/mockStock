@@ -14,17 +14,6 @@ const router = new VueRouter({
 	routes
 });
 
-
-
-
-//router.beforeResolve((to,from,next)=>{
-//	alert(this+':   beforeResolve')
-//	next()
-//})
-//router.afterEach((to,from)=>{
-//	alert(this,+':   afterEach')
-//})
-
 new Vue({
 	render:(create)=>create(app),
 	router

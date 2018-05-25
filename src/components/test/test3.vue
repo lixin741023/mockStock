@@ -1,6 +1,7 @@
 <template>
 	<div class="txt3">
 		<h2 @click="back">txt3</h2>
+		{{$route.params}}
 		<hr />
 		<p>
 			{{xx}}
